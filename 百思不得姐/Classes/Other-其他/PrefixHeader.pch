@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by 何达达mac on 17/3/13.
+//  Copyright © 2017年 hedada. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+//日志
+#ifdef DEBUG
+#define HD_Log(...) NSLog(_VA_ARGS)
+#else
+#define HD_Log(...)
+#endif
+#import "UIView+HD_Extension.h"
+#import "HD_ItemManager.h"
+#import "HD_BaseViewController.h"
+//颜色
+#define HD_ColorA(r,g,b,a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a) / 255.0]
+#define HD_Color(r,g,b) HD_ColorA((r),(g),(b),255)
+
+#define HD_random HD_Color( arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#define HD_CommonBgColor HD_Color(206,206,206);
+
+#endif /* PrefixHeader_pch */
