@@ -12,7 +12,6 @@
 		BAE7CD1F1E76968E00BEF814 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE7CD1E1E76968E00BEF814 /* ViewController.m */; };
 		BAE7CD221E76968E00BEF814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE7CD201E76968E00BEF814 /* Main.storyboard */; };
 		BAE7CD241E76968E00BEF814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE7CD231E76968E00BEF814 /* Assets.xcassets */; };
-		BAE7CD271E76968E00BEF814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE7CD251E76968E00BEF814 /* LaunchScreen.storyboard */; };
 		BAE7CD321E76968E00BEF814 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE7CD311E76968E00BEF814 /* _____Tests.m */; };
 		BAE7CD3D1E76968E00BEF814 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE7CD3C1E76968E00BEF814 /* _____UITests.m */; };
 /* End PBXBuildFile section */
@@ -43,7 +42,6 @@
 		BAE7CD1E1E76968E00BEF814 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BAE7CD211E76968E00BEF814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAE7CD231E76968E00BEF814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BAE7CD261E76968E00BEF814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAE7CD281E76968E00BEF814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE7CD2D1E76968E00BEF814 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE7CD311E76968E00BEF814 /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____Tests.m"; sourceTree = "<group>"; };
@@ -101,14 +99,7 @@
 		BAE7CD161E76968E00BEF814 /* 百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
-				BAE7CD1A1E76968E00BEF814 /* AppDelegate.h */,
-				BAE7CD1B1E76968E00BEF814 /* AppDelegate.m */,
-				BAE7CD1D1E76968E00BEF814 /* ViewController.h */,
-				BAE7CD1E1E76968E00BEF814 /* ViewController.m */,
-				BAE7CD201E76968E00BEF814 /* Main.storyboard */,
-				BAE7CD231E76968E00BEF814 /* Assets.xcassets */,
-				BAE7CD251E76968E00BEF814 /* LaunchScreen.storyboard */,
-				BAE7CD281E76968E00BEF814 /* Info.plist */,
+				BAE7CD4A1E769C5000BEF814 /* Classes */,
 				BAE7CD171E76968E00BEF814 /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -117,7 +108,9 @@
 		BAE7CD171E76968E00BEF814 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BAE7CD181E76968E00BEF814 /* main.m */,
+				BAE7CD231E76968E00BEF814 /* Assets.xcassets */,
+				BAE7CD201E76968E00BEF814 /* Main.storyboard */,
+				BAE7CD281E76968E00BEF814 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +131,18 @@
 				BAE7CD3E1E76968E00BEF814 /* Info.plist */,
 			);
 			path = "百思不得姐UITests";
+			sourceTree = "<group>";
+		};
+		BAE7CD4A1E769C5000BEF814 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BAE7CD1A1E76968E00BEF814 /* AppDelegate.h */,
+				BAE7CD1B1E76968E00BEF814 /* AppDelegate.m */,
+				BAE7CD1D1E76968E00BEF814 /* ViewController.h */,
+				BAE7CD1E1E76968E00BEF814 /* ViewController.m */,
+				BAE7CD181E76968E00BEF814 /* main.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +207,7 @@
 		BAE7CD0C1E76968D00BEF814 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HD_;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = hedada;
 				TargetAttributes = {
@@ -246,7 +252,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE7CD271E76968E00BEF814 /* LaunchScreen.storyboard in Resources */,
 				BAE7CD241E76968E00BEF814 /* Assets.xcassets in Resources */,
 				BAE7CD221E76968E00BEF814 /* Main.storyboard in Resources */,
 			);
@@ -317,14 +322,6 @@
 				BAE7CD211E76968E00BEF814 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BAE7CD251E76968E00BEF814 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BAE7CD261E76968E00BEF814 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -422,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "heda.-----";
@@ -433,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "heda.-----";
