@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HD_WebViewController">
+            <connections>
+                <outlet property="backItem" destination="07F-iw-tRX" id="iqc-U1-SbU"/>
+                <outlet property="forwardItem" destination="hXX-LW-chg" id="OHG-vh-8sP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="eFa-L9-sl0" id="FaA-Oz-srL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSR-oZ-JlH">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem title="左" id="07F-iw-tRX">
+                            <connections>
+                                <action selector="back:" destination="-1" id="d1U-Kq-24O"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="右" id="hXX-LW-chg">
+                            <connections>
+                                <action selector="forward:" destination="-1" id="Rcq-i7-tiV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="yc7-nj-Mlc"/>
+                        <barButtonItem title="刷新" id="7Ab-Vc-N3F">
+                            <connections>
+                                <action selector="reload:" destination="-1" id="D1p-c1-61E"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFa-L9-sl0">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eFa-L9-sl0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Kid-zB-nCt"/>
+                <constraint firstAttribute="trailing" secondItem="KSR-oZ-JlH" secondAttribute="trailing" id="QgT-MD-JJG"/>
+                <constraint firstItem="KSR-oZ-JlH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UUW-i9-6aE"/>
+                <constraint firstAttribute="trailing" secondItem="eFa-L9-sl0" secondAttribute="trailing" id="e5k-W4-Osx"/>
+                <constraint firstAttribute="bottom" secondItem="KSR-oZ-JlH" secondAttribute="bottom" id="fNT-It-mOe"/>
+                <constraint firstItem="KSR-oZ-JlH" firstAttribute="top" secondItem="eFa-L9-sl0" secondAttribute="bottom" id="sFA-Hw-Bjj"/>
+                <constraint firstItem="eFa-L9-sl0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tHa-Rp-yti"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="151.5"/>
+        </view>
+    </objects>
+</document>

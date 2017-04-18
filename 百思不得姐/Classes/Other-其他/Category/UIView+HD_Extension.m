@@ -9,6 +9,11 @@
 #import "UIView+HD_Extension.h"
 
 @implementation UIView (HD_Extension)
++ (instancetype)viewFromXib
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+}
+
 -(CGFloat)HD_width
 {
     return self.frame.size.width;

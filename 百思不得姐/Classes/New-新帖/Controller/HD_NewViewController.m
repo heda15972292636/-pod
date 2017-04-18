@@ -6,7 +6,13 @@
 //  Copyright © 2017年 hedada. All rights reserved.
 //
 
+//配置尺寸
+#define ScreenHeight [[UIScreen mainScreen]bounds].size.height
+#define ScreenWidth  [[UIScreen mainScreen]bounds].size.width
+#define Screen     [[UIScreen mainScreen]bounds]
+
 #import "HD_NewViewController.h"
+#import "HD_FirstView.h"
 
 @interface HD_NewViewController ()
 
@@ -17,9 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-     NSLog(@"%s",__func__);
+       self.navigationItem.title = @"瀑布流";
        self.view.backgroundColor = HD_CommonBgColor;
     self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
+    HD_FirstView *firstView = [HD_FirstView createFirstView];
+    firstView.frame = CGRectMake(0, 64, ScreenWidth, 200);
+    [self.view addSubview:firstView];
 }
 
 - (void)didReceiveMemoryWarning {

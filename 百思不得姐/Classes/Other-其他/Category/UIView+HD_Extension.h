@@ -26,4 +26,6 @@
 @property(nonatomic,assign)CGFloat HD_bottom;
 
 @property(nonatomic,assign)CGSize HD_size;
+
++ (instancetype)viewFromXib;
 @end

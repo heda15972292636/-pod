@@ -14,10 +14,22 @@
 #else
 #define HD_Log(...)
 #endif
+
+
 #import "UIView+HD_Extension.h"
-#import "HD_ItemManager.h"
-#import "HD_BaseViewController.h"
+#import "HD_TextField.h"
+#import "HD_Const.h"
+#import "NSString+HD_Extension.h"
+#import "NSDate+HD_Extension.h"
+//当前系统版本判断
+
+// 弱引用
+#define XMGWeakSelf __weak typeof(self) weakSelf = self;
+ typedef void (^touchBlock)(CGRect rect,UITapGestureRecognizer *tap);
+ typedef void (^btnClickBlock)();
 //颜色
+
+
 #define HD_ColorA(r,g,b,a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a) / 255.0]
 #define HD_Color(r,g,b) HD_ColorA((r),(g),(b),255)
 
@@ -25,4 +37,5 @@
 
 #define HD_CommonBgColor HD_Color(206,206,206);
 
+#define HD_iOS(version)  [UIDevice currentDevice].systemVersion.doubleValue >= (version)
 #endif /* PrefixHeader_pch */

@@ -1,0 +1,13 @@
+//
+//  HD_RefreshHeader.h
+//  百思不得姐
+//
+//  Created by 何达达mac on 17/3/17.
+//  Copyright © 2017年 hedada. All rights reserved.
+//
+
+#import <MJRefresh/MJRefresh.h>
+
+@interface HD_RefreshHeader : MJRefreshNormalHeader
+
+@end

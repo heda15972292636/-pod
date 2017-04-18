@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HD_FollowViewController : HD_BaseViewController
+
+
+@interface HD_FollowViewController : UIViewController
 
 @end

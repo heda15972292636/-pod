@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HD_NewViewController : HD_BaseViewController
+@interface HD_NewViewController : UIViewController
 
 @end

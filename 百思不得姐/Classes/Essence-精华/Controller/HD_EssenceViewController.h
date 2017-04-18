@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HD_EssenceViewController : HD_BaseViewController
+@interface HD_EssenceViewController : UIViewController
 
 @end

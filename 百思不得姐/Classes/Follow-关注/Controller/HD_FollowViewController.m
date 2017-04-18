@@ -7,8 +7,10 @@
 //
 
 #import "HD_FollowViewController.h"
-
-@interface HD_FollowViewController ()
+#import "HD_BaseViewController.h"
+#import "HD_LoginRegistViewController.h"
+#import "HD_BackItem.h"
+@interface HD_FollowViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -22,13 +24,29 @@
     
     self.navigationItem.title = @"我的关注";
     self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
-    self.navigationItem.leftBarButtonItem = [HD_ItemManager itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon_click" target:self action:@selector(followClick)];
+    self.navigationItem.leftBarButtonItem = [HD_BackItem itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon_click" target:self action:@selector(followClick)];
+    
+    
+    
+    
 }
+
+
+
 
 -(void)followClick{
   
     NSLog(@"%s",__func__);
+    HD_BaseViewController *base = [[HD_BaseViewController alloc]init];
+    [self.navigationController pushViewController:base animated:YES];
+    
 }
+
+- (IBAction)loginRegister {
+    
+    [self presentViewController:[[HD_LoginRegistViewController alloc]init] animated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

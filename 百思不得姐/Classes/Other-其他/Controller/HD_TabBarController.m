@@ -7,6 +7,7 @@
 //
 
 #import "HD_TabBarController.h"
+#import "HD_NavigationController.h"
 #import "HD_TabBar.h"
 #import "HD_EssenceViewController.h"
 #import "HD_NewViewController.h"
@@ -32,13 +33,15 @@
     selectedAttrs[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
 
-    [self setupOneChildController:  [[UINavigationController alloc]initWithRootViewController:[[HD_EssenceViewController alloc]init]] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupOneChildController:[[UINavigationController alloc]initWithRootViewController:[[HD_NewViewController alloc]init]] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
-    [self setupOneChildController:[[UINavigationController alloc]initWithRootViewController:[[HD_FollowViewController alloc]init]]  title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
-    [self setupOneChildController: [[UINavigationController alloc]initWithRootViewController:[[HD_MeViewController alloc]init]]   title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupOneChildController:  [[HD_NavigationController alloc]initWithRootViewController:[[HD_EssenceViewController alloc]init]] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupOneChildController:[[HD_NavigationController alloc]initWithRootViewController:[[HD_NewViewController alloc]init]] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    [self setupOneChildController:[[HD_NavigationController alloc]initWithRootViewController:[[HD_FollowViewController alloc]init]]  title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupOneChildController: [[HD_NavigationController alloc]initWithRootViewController:[[HD_MeViewController alloc]init]]   title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
     //更换tabBar的操作
+
     [self setValue:[[HD_TabBar alloc]init] forKeyPath:@"tabBar"];
+    
     
 }
 
